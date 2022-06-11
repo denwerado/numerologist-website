@@ -1,0 +1,224 @@
+section.account
+    position: relative
+    min-height: 100vh
+    padding: 140px 0 95px 0
+    & .account__block
+        max-width: 830px
+        & .account__title
+            margin: 0
+            font-size: 42px
+            font-weight: 300
+    & .account__background
+        position: absolute
+        bottom: 35px
+        right: 0
+        max-height: 86.6vh
+        max-width: 36.875%
+    & .account__info
+        margin: 0
+        margin-top: 10px
+        font-size: 32px
+    & .account__term
+        margin-top: 25px
+        font-size: 24px
+    & .account__description
+        margin: 0
+        margin-top: 15px
+    & .account__line
+        width: 100%
+        margin: 40px 0
+        height: 1px
+        background: #DCD7D1
+    & .account__data
+        &_disable
+            color: #B8B8B8
+            & .cmp-forms__input
+                border: 1px solid #B8B8B8
+                cursor: not-allowed
+            & .cmp-forms__radio
+                & label 
+                    border: 1px solid #B8B8B8
+                    cursor: not-allowed
+                    
+    & .account__premium
+        margin-top: 40px
+        & .account__description
+            margin: 0
+        &-wrap
+            display: flex
+            align-items: start
+            & .cmp-latch
+                margin-left: 10px
+                &__popup
+                    top: auto
+                    bottom: -20px
+                    left: -8px
+                    right: auto
+                    transform: none
+        & .cmp-forms__item
+            & .cmp-forms__error
+                margin: 0
+                margin-top: 10px
+                font-size: 14px
+                font-style: italic
+                text-align: left
+                
+        &_disable
+            color: #B8B8B8
+            & .cmp-forms__input
+                border: 1px solid #B8B8B8
+                cursor: not-allowed
+    & .cmp-forms__wrap
+        margin-bottom: 40px
+        & .cmp-forms__item
+            max-width: 250px
+            & .cmp-forms__error
+                margin: 0
+                margin-top: 10px
+                font-size: 14px
+                font-style: italic
+                text-align: left
+    & .cmp-forms__item
+        max-width: 250px
+        margin-top: 30px
+    & .account__buttons
+        display: flex
+        justify-content: space-between
+        margin-top: 50px
+
+
+@media ( max-width: 1450px )
+    section.account
+        & .account__block
+            max-width: 800px
+
+@media ( max-width: 1350px )
+    section.account
+        padding: 120px 0 50px 0
+        & .account__block
+            max-width: none
+            width: 100%
+        & .account__data
+            max-width: 700px
+            & .cmp-forms__wrap
+                & .cmp-forms__item
+                    max-width: 335px 
+                    width: 48%
+                & .cmp-forms__radio
+                    max-width: 250px
+        & .account__premium
+            & .cmp-forms__item
+                max-width: 335px 
+        & .account__line
+            max-width: 700px
+        & .account__background
+            bottom: auto
+            top: 403px
+
+@media ( max-width: 1200px )
+    section.account
+        padding: 120px 0 50px 0
+        & .account__data
+            max-width: 650px
+            & .cmp-forms__wrap
+                & .cmp-forms__item
+                    max-width: 310px
+        & .account__premium
+            & .cmp-forms__item
+                max-width: 300px 
+        & .account__line
+            max-width: 650px
+
+@media ( max-width: 1150px )
+    section.account
+        & .account__data
+            max-width: 600px
+            & .cmp-forms__wrap
+                & .cmp-forms__item
+                    max-width: 290px 
+        & .account__premium
+            & .cmp-forms__item
+                max-width: 290px 
+        & .account__line
+            max-width: 600px
+
+@media ( max-width: 1024px )
+    section.account
+        & .account__background
+            display: none
+        & .account__data
+            max-width: 850px
+            & .cmp-forms__wrap
+                & .cmp-forms__item
+                    max-width: 250px
+                    width: 100%
+        & .account__premium
+            & .cmp-forms__item
+                max-width: 250px
+        & .account__line
+            max-width: 850px
+
+@media ( max-width: 850px )
+    section.account
+        & .account__block
+            & .account__title
+                font-size: 36px
+        & .account__info
+            font-size: 28px
+        & .account__data
+            & .cmp-forms__wrap
+                & .cmp-forms__item
+                    max-width: 320px 
+                    width: 48%
+                    & .cmp-forms__radio
+                        max-width: 250px
+
+
+@media ( max-width: 768px )
+    section.account
+        padding: 100px 0 35px 0
+        & .account__block
+            & .account__title
+                font-size: 32px
+        & .account__info
+            font-size: 24px
+        & .account__term
+            font-size: 20px
+        & .account__line
+            margin: 30px 0
+        & .account__premium
+            &-wrap
+                & .cmp-latch
+                    &__popup
+                        top: auto
+                        bottom: -20px
+                        left: auto
+                        right: -8px
+
+@media ( max-width: 576px )
+    section.account
+        & .account__block
+            & .account__title
+                font-size: 28px
+        & .account__info
+            font-size: 20px
+        & .account__term
+            font-size: 18px
+        & .account__buttons
+            margin-top: 40px
+            & button
+                width: 100%
+        & .account__data
+            & .cmp-forms__wrap
+                display: block
+                & .cmp-forms__item
+                    width: 100%
+                    max-width: none
+                    &.cmp-forms__radio 
+                        max-width: 275px
+                        & label
+                            width: 130px
+        & .account__premium 
+            & .cmp-forms__item
+                width: 100%
+                max-width: none

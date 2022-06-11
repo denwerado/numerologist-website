@@ -1,0 +1,96 @@
+section.intelligence
+    padding: 50px 0
+    & .intelligence__description
+        margin-top: 40px
+    & .intelligence__wrap
+        margin-left: auto
+        margin-right: 0
+        margin-top: 170px
+        position: relative
+        max-width: 1300px
+        width: 100%
+        & .overflow
+            overflow: hidden
+            width: 100%
+        & .intelligence__background
+            display: block
+            width: 100%
+        & .intelligence__components
+            position: absolute
+            padding: 60px
+            width: 470px
+            border-radius: 5px
+            background-color: #F3D5C7
+            top: 0
+            left: 0
+            transform: translateX(-16.7%) translateY(-19.37%)
+            z-index: 1
+            & .item
+                font-size: 20px
+                line-height: 1.2em
+                &:nth-child(n+2)
+                    margin-top: 15px
+            & .cmp-button
+                position: absolute
+                bottom: 0
+                right: 0
+                transform: translateX(37.44%) translateY(47.39%)
+
+@media (max-width: 1400px)
+    section.intelligence
+        & .intelligence__wrap
+            & .intelligence__components
+                transform: translateX(-5%) translateY(-19.37%)
+
+@media (max-width: 1350px)
+    section.intelligence
+        & .intelligence__wrap
+            margin-top: 100px
+            & .intelligence__background
+                border-top-left-radius: 5px
+            & .intelligence__components
+                transform: translateY(-15%)
+
+@media (max-width: 1024px)
+    section.intelligence
+        //padding: 50px 0
+        & .intelligence__components
+            width: 400px
+            padding: 45px
+
+@media (max-width: 900px)
+    section.intelligence
+        & .intelligence__wrap
+            & .intelligence__background
+                transform: translateX(8%)
+            & .intelligence__components
+                & .cmp-button
+                    transform: translateX(30%) translateY(35%)
+
+
+@media (max-width: 850px)
+    section.intelligence
+        & .intelligence__wrap
+            & .intelligence__background
+                transform: translateX(12%)
+
+@media (max-width: 768px)
+    section.intelligence
+        padding: 20px 0 100px 0
+        & .intelligence__description
+            display: none
+        & .intelligence__wrap
+            margin-top: 30px
+            & .intelligence__background
+                transform: none
+                border-radius: 0
+            & .intelligence__components
+                position: static
+                transform: none
+                width: 100%
+                border-radius: 0
+                & .cmp-button
+                    bottom: 0
+                    right: auto
+                    left: 10px
+                    transform: translateY(50%)

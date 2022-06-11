@@ -1,0 +1,61 @@
+section.login
+    position: relative
+    width: 100%
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: 0 25px
+    & .login__block
+        max-width: 390px
+        & .login__form
+            margin-top: 30px
+            &  button 
+                margin: auto
+                margin-top: 50px
+        & .links
+            margin-top: 25px
+            display: flex
+            align-items: center
+            flex-direction: column
+            & a
+                display: inline-block
+                text-decoration: underline
+                font-size: 18px
+            & button
+                font-size: 16px
+                margin-top: 30px
+    & .cmp-company
+        position: absolute
+        bottom: 50px
+        left: 50%
+        transform: translateX(-50%)
+    & .login__title
+        font-size: 38px
+
+@media (max-height: 800px)
+    section.login
+        padding-top: 100px
+        padding-bottom: 125px
+        align-items: flex-start
+        & .cmp-company
+            bottom: 25px
+
+@media (max-width: 1024px)
+    section.login
+        & .login__block
+            & .login__title
+                font-size: 32px
+
+@media (max-width: 768px)
+    section.login
+        & .login__block
+            & .login__title
+                font-size: 32px
+
+@media ( max-width: 380px  )
+    section.login
+        & .login__block
+            &  button 
+                font-size: 16px 
+                padding: 15px 20px

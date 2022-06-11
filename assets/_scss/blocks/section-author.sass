@@ -1,0 +1,93 @@
+section.author
+    position: relative
+    padding: 50px 0 330px 0
+    & .author__block
+        max-width: 690px
+    & .author__title
+        margin-bottom: 50px
+    & .author__description
+        &:nth-child(n+2)
+            margin-top: 10px
+    & .author__background
+        position: absolute
+        top: 70px
+        right: 30px
+        width: 44vw
+        max-width: 838px
+        & img  
+            width: 100%
+        & span
+            position: absolute
+            bottom: 30px
+            left: 30px
+            right: 30px
+            font-weight: 400
+            font-size: 38px
+            line-height: 110%
+            color: #FFFFFF
+
+@media ( max-width: 1700px )
+    section.author
+        padding: 50px 0 250px 0
+
+
+@media ( max-width: 1500px )
+    section.author
+        padding: 50px 0 180px 0
+
+@media ( max-width: 1400px )
+    section.author
+        padding: 50px 0 150px 0
+        & .author__block
+            max-width: 600px
+        & .author__background
+            & span
+                font-size: 32px
+
+@media ( max-width: 1350px )
+    section.author
+        padding: 50px 0 50px 0
+        & .author__title
+            margin-bottom: 35px
+        & .author__block
+            max-width: 500px
+        & .author__background
+            width: 90vw
+            max-width: 550px
+            & span
+                font-size: 28px
+
+@media ( max-width: 1150px )
+    section.author
+        & .author__block
+            max-width: 450px 
+        & .author__background
+            max-width: 500px
+
+@media ( max-width: 1024px )
+    section.author
+        & .author__title
+            margin-bottom: 30px
+        & .author__block
+            width: 100%
+            max-width: none
+        & .author__background
+            position: relative
+            width: 100%
+            top: auto
+            right: auto
+            margin-bottom: 20px
+
+@media ( max-width: 768px )
+    section.author
+        padding: 50px 0 70px 0
+
+@media ( max-width: 576px )
+    section.author
+        & .author__background
+            & span
+                bottom: 15px
+                left: 0
+                right: 0
+                text-align: center
+                font-size: 25px

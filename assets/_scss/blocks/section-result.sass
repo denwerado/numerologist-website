@@ -1,0 +1,85 @@
+section.result
+    padding: 135px 0 145px 0
+    -moz-user-select: none
+    -webkit-user-select: none
+    -ms-user-select: none
+    -o-user-select: none
+    user-select: none
+    /*& .result__block
+        & .cmp-button_orange-reverse
+            margin-top: 70px
+            max-width: 230px
+            padding: 17px
+            font-size: 14px*/
+    & .cmp-matrix
+        margin-top: 30px
+    & .result__name
+        margin: 0
+        margin-top: 60px
+        margin-bottom: 50px
+        font-size: 28px
+        font-weight: 700
+    & .result__wrap
+        display: flex
+        align-items: center
+        flex-wrap: wrap
+        & .cmp-button 
+            margin-top: 10px
+            margin-left: 60px
+            padding: 17px 25px
+            font-size: 14px
+    & .cmp-modal__scroll
+        & ul
+            margin-top: 15px
+            & li
+                &:nth-child(n+2)
+                    margin-top: 15px
+    & .result__chapter
+        margin-top: 50px
+        &-title
+            display: flex
+            align-items: center
+            & span
+                color: rgba(225, 152, 140, 1)
+                font-size: 28px
+                text-transform: uppercase 
+                font-weight: 400
+            & .cmp-hint
+                margin-right: 15px
+
+@media ( max-width: 1024px )
+    section.result
+        padding: 120px 0 100px 0
+        & .result__chapter
+            &-title
+                & span
+                    font-size: 24px
+    
+@media ( max-width: 768px )
+    section.result
+        padding: 120px 0 70px 0
+        & .result__name
+            margin-top: 50px
+            margin-bottom: 40px
+            font-weight: 600
+        & .result__chapter
+            &-title
+                & span
+                    font-size: 20px
+
+
+@media ( max-width: 576px )
+    section.result
+        & .result__chapter
+            &-title
+                & span
+                    font-size: 18px
+                & .cmp-hint
+                    margin-right: 10px
+        & .result__name
+            margin: 30px 0 20px 0 
+            font-size: 22px
+
+@media print
+    section.result
+        padding: 120px 0 70px 0

@@ -1,0 +1,609 @@
+//Модальное окно по умолчанию
+.cmp-modal
+    position: fixed
+    top: 0
+    left: 0
+    width: 100vw
+    height: 100vh
+    display: none
+    align-items: center
+    justify-content: center
+    background: rgba(62, 62, 62, 0.3)
+    z-index: 3
+    &_active
+        display: flex !important
+
+    //Стили для маленького окна
+    &__small
+        & .cmp-modal__block
+            max-width: 560px
+            width: 95%
+            padding: 50px 0 50px 35px
+        & .cmp-modal__scroll
+            padding: 20px 35px 20px 0
+     
+    //Cтили для основных блоков 
+    &__block
+        position: relative
+        padding: 60px 0 30px 100px
+        max-width: 1250px
+        width: 95%
+        background: #F9F3EB
+    &__scroll
+        width: 100%
+        padding: 20px 20px 20px 0
+        max-height: 70vh
+        overflow: hidden
+        overflow-y: auto
+        & .cmp-modal__close
+            position: static
+        & div[data-typepay]
+            margin-top: 15px
+        & .cmp-forms__item
+            & .cmp-forms__error
+                margin: 0
+                margin-top: 10px
+                font-size: 14px
+                font-style: italic
+                text-align: left
+    
+    //Кнопка закрытия
+    &__close
+        position: absolute
+        top: 20px
+        right: 30px
+        cursor: pointer
+        display: flex
+        align-items: center
+        & span
+            font-size: 16px
+        & .cross
+            margin-left: 10px
+            max-width: 12.5px
+            max-height: 14px
+            transition: 0.5s all
+            &:hover
+                transform: rotate(180deg)
+    
+    //Блоки с оплатой
+    &__verification
+        & .cmp-button
+            margin-top: 45px
+    &__payment
+        display: none
+
+    //Блоки со сменой пароля
+    &__recovery
+        & .cmp-button
+            margin-top: 45px
+    
+    //Стили для текста
+    &__title
+        margin: 0
+        font-weight: 300
+        font-size: 38px
+        line-height: 1em
+    &__subtitle
+        margin: 0
+        margin-top: 40px
+        font-weight: 300
+        font-size: 24px
+        color: rgba(225, 152, 140, 1)
+    &__description
+        margin: 0
+        margin-top: 15px
+        font-size: 18px
+        line-height: 1.2em
+        &[data-modal]
+            cursor: pointer
+            margin-top: 20px
+    &__name
+        margin: 0
+        margin-top: 60px
+        margin-bottom: 50px
+        font-weight: 700
+        font-size: 24px
+    &__text
+        &-success
+            margin: 0
+            margin-top: 15px
+            text-align: center
+            font-size: 20px
+            font-weight: 500
+            color: #228B22
+        &-waning
+            margin: 0
+            margin-top: 15px
+            text-align: center
+            font-size: 20px
+            font-weight: 500
+            color: #FFA500
+        &-error
+            margin: 0
+            margin-top: 15px
+            text-align: center
+            font-size: 20px
+            font-weight: 500
+            color: #FF0000
+
+
+    //Стили для оберток
+    &__wrap
+        display: flex
+        align-items: start
+        justify-content: space-between
+        flex-wrap: wrap
+        margin-top: 50px
+        & .col
+            width: 48.6%
+            & .cmp-forms__input
+                max-width: 385px
+            & .cmp-button
+                margin-top: 50px
+                width: 310px
+    &__visualization
+        max-width: 600px
+    &__info
+        max-width: 640px
+        & .cmp-button
+            max-width: 310px
+            margin-top: 40px
+        
+    //Дробь
+    &__ratio
+        margin-top: 60px
+        & .title
+            display: inline-block
+            font-weight: 500
+            font-size: 24px
+        & .wrap
+            position: relative
+            margin-top: 20px
+            max-width: 140px
+            & .number
+                display: block
+                font-size: 80px
+                font-weight: 500
+                &:nth-child(2)
+                    text-align: right
+            &::before
+                content: ''
+                position: absolute
+                top: 50%
+                left: 50%
+                display: block
+                height: 100%
+                width: 1px
+                background-color: #2A2623
+                transform: translateX(-50%) translateY(-50%) rotate(-135deg)
+    &__buttons
+        display: flex
+        align-items: center
+        margin-top: 70px
+        & .cmp-link_hover
+            margin-left: 55px
+    &__mobile
+        display: none !important
+    &__result
+        display: block
+        & .cmp-modal__preview
+            display: inline-block
+            padding-top: 10px
+            width: 44%
+        & .cmp-modal__subtitle
+            margin-top: 30px
+        & .cmp-modal__close
+            position: static
+
+    //Блоки со сменой тарифа
+    &__rate
+        width: 100%
+        padding: 40px
+        background-color: #fff
+        margin-top: 20px
+
+        //Для другого типа цвета
+        &_pastel
+            background-color: #f8e0dc
+            & .line
+                background-color: #963809 !important
+
+        &:nth-child(2)
+            margin-top: 50px
+        & .plans
+            position: relative
+            display: inline-block
+            margin: 0
+            font-size: 20px
+            line-height: 1.2em
+            font-weight: 600
+        & .time
+            margin: 0
+            margin-top: 20px
+            font-weight: 600
+            font-size: 40px
+            line-height: 1.2em
+        & .list-name
+            margin: 0
+            margin-top: 20px
+            font-weight: 600
+            font-size: 18px
+        & .functional
+            display: flex
+            align-items: start
+            flex-wrap: wrap
+            margin-top: 5px
+            width: 100%
+            &__block
+                display: block  
+            & li
+                position: relative
+                padding-left: 20px
+                font-size: 18px
+                line-height: 1.2em
+                font-weight: 400
+                width: 48%
+                margin-top: 15px
+                &::before
+                    content: ''
+                    position: absolute
+                    left: 0
+                    top: 0.5rem
+                    width: 10px
+                    height: 10px
+                    border-radius: 50%
+                    background-color: #2A2623
+                    transform: translateY(-50%)
+        & .price
+            margin: 0
+            margin-top: 45px
+            font-weight: 600
+            font-size: 20px
+            line-height: 1.2em
+        & .cmp-button
+            margin-top: 25px
+            min-width: 210px
+        & .line
+            width: 100%
+            height: 1px
+            background-color: #C2C2C2
+            margin-top: 20px
+
+    //Стили для вывода расчета во вкладке /account/result/
+    &__result-content
+        & .title   
+            margin: 0
+            font-weight: 300
+            font-size: 38px
+            line-height: 1em 
+        & .content
+            margin-top: 30px
+            & .description  
+                margin: 0
+                font-size: 18px
+                &:nth-child(n+2)
+                    margin-top: 20px
+            & .subtitle
+                margin: 0
+                margin-top: 25px
+                color: rgba(225, 152, 140, 1)
+                font-size: 24px
+                font-weight: 500
+                &:nth-child(n+2)
+                    margin-top: 35px
+            & .datebirth
+                margin: 0
+                font-size: 18px
+                margin-top: 20px
+                font-weight: 300
+
+            & ul.ul
+                margin-top: 20px
+                & li
+                    font-size: 18px
+                    &:nth-child(n+2)
+                        margin-top: 10px
+
+            & ul.calc
+                margin-top: 20px
+                & li
+                    font-size: 18px
+                    &:nth-child(n+2)
+                        margin-top: 10px
+
+            & .cmp-matrix
+                width: 50%
+                margin-top: 40px
+                margin-bottom: 40px
+            
+            & ul.note
+                padding-left: 20px
+                margin-top: 20px
+                & li
+                    position: relative
+                    font-size: 18px
+                    &:nth-child(n+2)
+                        margin-top: 15px
+                    &::before
+                        content: ''
+                        position: absolute
+                        width: 10px
+                        height: 10px
+                        border-radius: 50%
+                        background-color: #E1988C
+                        top: 0.5rem
+                        left: -10px
+                        transform: translateX(-100%)
+            & .row
+                display: flex
+                margin-top: 50px
+                & .cmp-matrix
+                    margin: 0
+                    & .cmp-matrix__wrap
+                        margin: 0
+                & ul.ul
+                    display: flex
+                    flex-direction: column
+                    justify-content: space-around
+                    margin: 0
+                    padding-left: 10px
+                    width: 50%
+                    & li 
+                        font-size: 18px
+                        margin: 0
+            & .col
+                margin-top: 50px
+                max-width: 360px
+                width: 50%
+                & .cmp-matrix
+                    width: 100%
+                    margin-top: 10px
+                    & .cmp-matrix__wrap
+                        margin: 0
+                & ul.ul
+                    display: flex
+                    justify-content: space-evenly
+                    margin: 0
+                    & li
+                        font-size: 18px
+                        &:nth-child(n+2)
+                            margin: 0
+            & .table
+                width: 100%
+                margin-top: 50px
+                margin-bottom: 50px
+                font-size: 35px
+                text-align: center
+                & thead
+                    color: rgba(225, 152, 140, 1)
+                & tbody
+                    & tr
+                        & td
+                            border: 1px  solid #C2C2C2
+                & tr
+                    & td
+                        padding-top: 10px
+                        padding-bottom: 10px
+
+    
+//Локальные  стили для блоков
+#change-rates
+    & .cmp-modal__scroll
+        padding-right: 100px
+
+#message
+    & button
+        margin-top: 50px
+
+#changing_pass
+    & button
+        margin: auto
+        margin-top: 50px
+    & .cmp-forms__item
+        margin-top: 25px
+
+
+//###Переход в модальное окно, при размерах <= 1024px
+.cmp-lg-modal
+    & .cmp-modal__close
+        position: static
+    &__visibility
+        display: none !important
+    
+
+@media ( max-width: 1250px )
+    .cmp-modal
+        & .cmp-modal__visualization
+            max-width: 500px
+
+
+@media ( max-width: 1100px )
+    .cmp-modal
+        &__result
+            & .cmp-modal__preview
+                display: none
+            & .cmp-modal__visualization
+                width: 100%
+                max-width: none
+            & .cmp-scrollbar__info
+                max-width: none
+
+
+@media ( max-width: 1024px )
+    .cmp-modal
+        &__small
+            & .cmp-modal__block
+                padding: 50px 0 25px 25px
+            & .cmp-modal__scroll
+                padding: 20px 35px 20px 0
+        &__block
+            padding: 60px 0 30px 50px
+        &__scroll
+            padding: 20px 50px 20px 0
+        &__title
+            font-size: 36px
+        &__action
+            margin-top: 30px
+        &__calculation
+            & .cmp-modal__preview
+                margin-top: 20px
+        &__ratio
+            margin-top: 50px
+        &__date
+            margin-top: 20px
+            font-size: 32px
+        &__name
+            margin-top: 40px
+            font-size: 24px
+            margin-bottom: 30px
+
+        //Стили для вывода результатов вычислений
+        &__result-content
+            & .content
+                & .row
+                    & ul.ul
+                        & li
+                            font-size: 16px
+    
+    //Отображение модального окна, при размерах <= 1024px
+    .cmp-lg-modal
+        position: fixed
+        top: 0
+        left: 0
+        width: 100vw
+        height: 100vh
+        display: none
+        align-items: center
+        justify-content: center
+        background: rgba(62, 62, 62, 0.3)
+        z-index: 3
+        &__block
+            width: 95%
+            padding: 20px 0 20px 20px
+        &__scroll
+            width: 100%
+            max-height: 85vh
+            padding: 0 5px 0 0
+            overflow: hidden
+            overflow-y: auto
+        &__visibility
+            display: block !important
+        
+    #change-rates
+        & .cmp-modal__scroll
+            padding-right: 50px
+
+
+@media ( max-width: 768px )
+    .cmp-modal
+        &__close
+            top: 10px
+            right: 10px
+        &__small
+            & .cmp-modal__block
+                padding: 35px 0 25px 25px
+        &__block
+            padding: 35px 0 25px 0
+        &__scroll
+            padding: 20px 25px 0 25px
+        &__title
+            font-size: 32px
+        /*&__subtitle
+            font-size: 28px*/
+        &__date
+            font-size: 24px
+        &__name
+            margin-top: 20px
+            font-size: 20px
+        &__wrap
+            display: block
+            margin-top: 25px
+            & .col
+                width: 100%
+                &:nth-child(n+2)
+                    margin-top: 20px
+                & .cmp-forms__input
+                    max-width: 600px
+                & .cmp-modal__preview
+                    margin: auto
+                    margin-top: 10px
+                    width: 75%
+        &__action
+            margin-top: 40px
+            & .arrow-to-right
+                display: none
+            & .arrow-to-left
+                display: none
+            & .cmp-button_orange-circle
+                margin: 0
+        &__ratio
+            margin-top: 25px
+            & .wrap
+                max-width: 75px
+                & .number
+                    font-size: 63px
+                &::before
+                    transform: translateX(-50%) translateY(-50%) rotate(-148deg)
+        &__buttons
+            margin-top: 30px
+            flex-direction: column-reverse
+            & .cmp-link_hover
+                margin: 0
+                margin-bottom: 30px
+        &__mobile
+            display: block !important
+        &__desctop
+            display: none !important
+
+        //Блоки со сменой тарифа
+        &__rate
+            padding: 25px
+            & .functional
+                display: block
+                & li
+                    width: 100%
+
+    #change-rates
+        & .cmp-modal__scroll
+            padding-right: 25px
+
+@media ( max-width: 576px )
+    .cmp-modal
+        &__title
+            font-size: 28px
+        &__date
+            font-size: 18px
+        &__wrap
+            & .col
+                & .cmp-modal__preview
+                    width: 100%
+        //Контент
+        &__result-content
+            & .content
+                & .cmp-matrix
+                    width: 60%
+                & .cmp-matrix__item 
+                    & span
+                        font-size: 45px
+                & .row
+                    & .cmp-matrix__item 
+                        & span
+                            font-size: 42px
+                    & ul.ul
+                        & li
+                            font-size: 14px
+    
+
+@media ( max-width: 380px )
+    .cmp-modal
+        &__result-content
+            & .content
+                & .cmp-matrix
+                    width: 75%
+                & .cmp-matrix__item 
+                     & span
+                        font-size: 42px
+                & .row
+                    & .cmp-matrix__item 
+                        & span
+                            font-size: 36px

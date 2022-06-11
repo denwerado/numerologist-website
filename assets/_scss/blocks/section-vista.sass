@@ -1,0 +1,140 @@
+section.vista
+    padding: 50px 0 50px 0
+    & .vista__list
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        & .item
+            position: relative
+            min-height: 250px
+            padding: 40px
+            border-radius: 5px
+            background-color: #fff
+            margin-top: 15px
+            overflow: hidden
+            & .description
+                display: block
+                margin: 0
+                font-size: 18px
+            & .preview
+                position: absolute
+            &:nth-child(1)
+                width: 25.94%
+            &:nth-child(2)
+                width: 45.65%
+                background: #E1988C
+                color: #FFFFFF
+                & .preview
+                    right: 0
+                    bottom: 0
+                    width: 31.75%
+                & .description
+                    max-width: 65.88%
+            &:nth-child(3)
+                width: 25.94%
+            &:nth-child(4)
+                width: 25.94%
+                background: #E1988C
+                color: #FFFFFF
+                & .preview
+                    bottom: 0
+                    right: 5%
+                    width: 35.2%
+            &:nth-child(5)
+                width: 25.94%
+            &:nth-child(6)
+                width: 45.65%
+            &:nth-child(7)
+                background: #E1988C
+                color: #FFFFFF
+                width: 100%
+                & .description
+                    max-width: 67.5%
+                & .preview
+                    bottom: 27px
+                    right: 7.6%
+                    width: 18.5%
+
+@media ( max-width: 1024px )
+    section.vista
+        //padding: 50px 0
+        & .vista__list
+            & .item
+                padding: 25px 15px
+                &:nth-child(1)
+                    width: 32.5%
+                &:nth-child(2)
+                    width: 32.5%
+                    & .description
+                        max-width: 78%
+                &:nth-child(3)
+                    width: 32.5%
+                &:nth-child(4)
+                    width: 32.5%
+                &:nth-child(5)
+                    width: 32.5%
+                &:nth-child(6)
+                    width: 32.5%
+    
+@media ( max-width: 900px )
+    section.vista
+        & .vista__list
+            & .item
+                &:nth-child(1)
+                    width: 49%
+                &:nth-child(2)
+                    width: 49%
+                &:nth-child(3)
+                    width: 49%
+                &:nth-child(4)
+                    width: 49%
+                &:nth-child(5)
+                    width: 49%
+                &:nth-child(6)
+                    width: 49%
+                &:nth-child(7)
+                    width: 100%
+
+@media ( max-width: 768px )
+    section.vista
+        & .vista__description
+            margin-top: 30px
+        & .vista__list
+            margin-top: 30px
+            & .item
+                margin: auto
+                padding: 15px 5px 20px 20px 
+                min-height: 390px
+                &:nth-child(1)
+                    width: 100%
+                    max-width: 300px
+            & .owl-stage-outer
+                & .owl-stage
+                    & .owl-item
+                        &:nth-child(2)
+                            & .item
+                                &:nth-child(1)
+                                    background: #E1988C
+                                    color: #FFFFFF
+                                    & .preview
+                                        width: 58%
+                                        top: auto
+                                        bottom: 0
+                                        right: 0
+                        &:nth-child(4)
+                            & .item
+                                &:nth-child(1)
+                                    background: #E1988C
+                                    color: #FFFFFF
+                                    & .preview
+                                        width: 42%
+                                        bottom: 20px
+                                        right: 18px
+                        &:nth-child(7)
+                            & .item
+                                &:nth-child(1)
+                                    background: #E1988C
+                                    color: #FFFFFF
+                                    & .preview
+                                        display: none

@@ -1,0 +1,56 @@
+section.necessity
+    padding: 50px 0 
+    & .necessity__preview
+        display: flex
+        margin-top: 20px
+        flex-wrap: wrap
+        justify-content: space-between
+        & .cmp-item
+            &:nth-child(3n+1)
+                max-width: 300px
+            &:nth-child(3n+2)
+                max-width: 420px
+            &:nth-child(3n+3)
+                max-width: 420px
+
+@media (max-width: 1200px)
+    section.necessity
+        & .necessity__preview
+            justify-content: flex-start
+            & .cmp-item
+                &:nth-child(n+1)
+                    max-width: 400px
+                &:nth-child(2n)
+                    margin-left: 10%
+
+@media (max-width: 1024px)
+    section.necessity
+        //padding: 100px 0 50px 0
+        & .necessity__preview
+            margin-top: 0
+            & .cmp-item
+                &:nth-child(2n)
+                    margin-left: 5%
+
+@media (max-width: 900px)
+    section.necessity
+        & .necessity__preview
+            & .cmp-item 
+                &:nth-child(n+1)
+                    max-width: 350px
+                &:nth-child(2n)
+                    margin-left: 5%
+
+@media (max-width: 768px)
+    section.necessity
+        padding: 30px 0 
+        & .necessity__preview
+            margin-top: 30px
+            display: block
+            & .cmp-item
+                &:nth-child(n+1)
+                    margin: 0
+                    width: 100%
+                    max-width: 100%
+                &:nth-child(n+2)
+                    margin-top: 20px

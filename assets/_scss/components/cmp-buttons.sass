@@ -1,0 +1,106 @@
+//Компонент кнопок
+.cmp-button
+    display: flex
+    align-items: center
+    justify-content: center
+    border-radius: 80px
+    font-size: 18px
+    &:disabled
+        opacity: 0.5
+        cursor: not-allowed
+    & svg
+        max-width: 36px
+        max-height: 36px
+    & .left_svg
+        margin: 0
+        margin-right: 10px
+    & .right_svg
+        margin: 0
+        margin-left: 10px
+    &_black
+        background: #2A2623
+        color: #ffffff
+        padding: 15px 25px
+        border: 1px solid #2A2623
+        font-weight: 500
+        transition: all 0.5s
+        &-reverse
+            padding: 15px 25px
+            border: 1px solid #2A2623
+            color: #2A2623
+            font-weight: bold
+            transition: all 0.5s
+            &:hover
+                border: 1px solid #E1988C
+                background: #E1988C
+                color: #fff
+        &:hover
+            border: 1px solid #E1988C
+            background: #E1988C
+            color: #fff
+
+    //Пастельная кнопка
+    &_pastel
+        border: 1px solid #E1988C
+        background-color: #E1988C
+        color: #fff
+        font-weight: 500
+        transition: all 0.5s
+        padding: 15px 25px
+        & svg
+            fill: #fff
+            transition: all 0.5s
+        &:hover
+            background-color: #CCA898
+            border: 1px solid #CCA898
+            box-shadow: 0px 4px 13px 0px #9273654D
+            //& svg
+                //fill: #fff
+        //Реверсивная пастельная кнопка
+        &-reverse
+            border: 1px solid #E1988C
+            color: #E1988C
+            font-weight: 500
+            transition: all 0.5s
+            padding: 15px 25px
+            & svg
+                max-width: 32px
+                max-height: 32px
+                fill: #E1988C
+                transition: all 0.5s
+            &:hover
+                border: 1px solid #E1988C
+                background: #E1988C
+                color: #fff
+                & svg
+                    fill: #fff
+                    
+#print_calc
+    & svg
+        max-width: 27px
+        max-height: 27px
+
+#another_calc
+    & svg
+        max-width: 27px
+        max-height: 22px
+
+@keyframes imageAnimate
+    0% 
+        transform: none
+    50% 
+        transform: rotate(-35deg)
+    100%
+        transform: none
+
+@media ( max-width: 768px  )
+    .cmp-button
+        &_orange
+            &-circle
+                width: 170px
+                height: 170px
+                font-size: 16px
+                & svg
+                    margin-top: 9px
+                    max-height: 28px
+                    max-width: 28px

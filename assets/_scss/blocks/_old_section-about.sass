@@ -1,0 +1,57 @@
+section.about
+    padding: 100px 0 50px 0
+    & .about__block
+        display: flex
+        align-items: start
+        justify-content: space-between
+        width: 100%
+        & .cmp-button_orange
+            display: none
+        & .info
+            max-width: 750px
+            & .cmp-button_orange
+                display: flex
+                margin-top: 50px
+                max-width: 285px
+    & .about__title
+        margin-bottom: 40px
+    & .about__description
+        margin-top: 30px
+        max-width: 620px
+    & .about__background
+        width: 39.86%
+
+@media ( max-width: 1024px )
+    section.about
+        //padding: 100px 0 50px 0
+        & .about__block
+            align-items: flex-end
+        & .about__background
+            margin-bottom: 110px
+
+@media ( max-width: 768px )
+    section.about
+        padding: 45px 0 
+        & .about__title
+            margin-bottom: 30px
+        & .about__block
+            display: block
+            & .cmp-button_orange
+                margin-top: 35px
+                display: flex
+            & .info
+                & .cmp-button_orange
+                    display: none
+        & .about__description
+            margin-top: 15px
+        & .about__background
+            display: block
+            margin: 0
+            margin: auto
+            margin-top: 30px
+            width: 75%
+
+@media ( max-width: 576px )
+    section.about
+        & .about__background
+            width: 100%

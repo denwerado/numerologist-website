@@ -1,0 +1,112 @@
+.footer
+    padding: 50px 0 40px 0
+    background: #FFFEFB
+    & .row
+        display: flex
+        align-items: center
+        justify-content: space-between
+        width: 100%
+        &:nth-child(1)
+            padding-bottom: 35px
+            border-bottom: 1px solid #2A2623
+        &:nth-child(2)
+            margin-top: 50px
+            align-items: start
+        &:nth-child(3)
+            margin-top: 30px
+        &:nth-child(4)
+            margin-top: 30px
+            justify-content: space-between
+            align-items: center
+            & .info
+                line-height: 1.5em
+                font-weight: 500
+        & .socials
+            & .social
+                &:nth-child(n+2)
+                    margin-left: 25px
+        & .documents
+            display: flex
+            flex-wrap: wrap
+            & li
+                line-height: 1.5em
+                margin-right: 30px
+                padding-top: 15px
+                & a
+                    text-decoration: underline
+    &__menu
+        display: flex
+        & .item
+            &:nth-child(n+2)
+                margin-left: 40px
+    &__payment
+        & .message
+            margin: 0
+        &-systems
+            display: flex
+            align-items: center
+            margin-top: 25px
+            flex-wrap: wrap
+            & .system
+                display: block
+                &:nth-child(n+2)
+                    margin-left: 20px
+    & .copyright
+        font-size: 18px
+                    
+@media ( max-width: 1024px )
+    .footer
+        &__menu
+            & .item
+                &:nth-child(n+2)
+                    margin-left: 20px
+        
+@media ( max-width: 900px )
+    .footer
+        & .row
+            &:nth-child(1)
+                & a 
+                    display: none
+                & .footer__menu
+                    & .item
+                        & a 
+                            display: block
+
+@media ( max-width: 768px )
+    .footer
+        padding: 30px 0
+        & .row
+            display: block
+            &:nth-child(2)
+                margin-top: 20px
+                display: flex
+                flex-direction: column-reverse
+            &:nth-child(3)
+                margin-top: 25px
+        &__payment
+            margin-top: 20px
+
+@media ( max-width: 700px )
+    .footer
+        & .row
+            &:nth-child(2)
+                padding-bottom: 20px
+        &__menu
+            display: block
+            & .item
+                &:nth-child(n+2)
+                    margin-left: 0
+                    margin-top: 10px
+        &__payment
+            &-systems
+                margin-top: 15px
+
+@media ( max-width: 576px )
+    .footer
+        &__payment
+            &-systems
+                & .system
+                    & img
+                        max-width: 52px
+                    &:nth-child(n+2)
+                        margin-left: 6px

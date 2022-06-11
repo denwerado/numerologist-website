@@ -1,0 +1,155 @@
+section.top 
+    overflow: hidden
+    position: relative
+    padding: 290px 0 290px 0
+    & .top__background
+        position: absolute
+        top: 0
+        bottom: 0
+        right: 0
+    & .top__block
+        position: relative
+        max-width: 760px
+        z-index: 1
+    & .top__title
+        font-size: 70px
+        line-height: 1em
+        margin-bottom: 30px
+        font-weight: 400
+        line-height: 110%
+        transform: translateX(-1%)
+        font-weight: 600
+        & span
+            font-weight: 600
+    & .top__description
+        margin-top: 15px
+    & .top__buttons
+        margin-top: 40px
+        display: flex
+        & .cmp-button_pastel
+            padding: 19px 28.5px
+    & .top__desctop
+        max-width: 620px
+    & .top__mobile
+        display: none
+
+@media (max-width: 1350px)
+    section.top 
+        //padding-bottom: 220px
+        & .top__background
+            transform: translateX(8%)
+
+@media (max-width: 1250px)
+    section.top 
+        & .top__block
+            max-width: 720px
+
+@media (max-width: 1200px)
+    section.top 
+        & .top__background
+            transform: translateX(12%)
+
+@media (max-width: 1150px)
+    section.top 
+        margin-top: 60px
+        & .top__background
+            transform: translateX(17%)
+
+
+@media (max-width: 1024px)
+    section.top 
+        padding: 120px 0 0 0
+        & .top__block
+            max-width: none
+        & .top__title
+            font-size: 63px
+        & .top__background
+            position: static
+            width: 125%
+            transform: translateX(-20%)
+        & .top__gradient
+            margin-top: 60px
+            position: relative
+            width: 100%
+            &::before
+                content: ''
+                position: absolute
+                top: 0
+                left: 0
+                width: 100%
+                height: 13.35%
+                background: linear-gradient(0deg, rgba(249, 243, 235, 0) 0%, #F9F3EB 100%)
+                z-index: 1
+            &::after
+                content: ''
+                position: absolute
+                bottom: 0
+                left: 0
+                width: 100%
+                height: 13.35%
+                background: linear-gradient(180deg, rgba(249, 243, 235, 0) 0%, #F9F3EB 100%)
+                z-index: 1
+                
+@media (max-width: 768px)
+    section.top 
+        padding: 100px 0 40px 0
+        & .top__desctop
+            display: none
+        & .top__mobile
+            margin-top: 50px
+            display: block
+        & .top__title
+            font-size: 54px
+            margin-bottom: 0
+        & .top__gradient
+            margin-top: 30px
+
+@media (max-width: 650px)
+    section.top 
+        & .top__title
+            font-size: 49px
+        
+@media (max-width: 576px)
+    section.top 
+        & .top__title
+            font-size: 45px
+        & .top__buttons
+            margin-top: 30px
+            flex-direction: column
+            & .cmp-button
+                width: 100%
+                padding: 19px 0
+                &:nth-child(n+2)
+                    margin: 0
+                    margin-top: 25px
+        & .top__background
+            width: 150%
+            transform: translateX(-33%)
+
+    
+@media (max-width: 490px)
+    section.top 
+        & .top__title
+            font-size: 40px
+
+@media (max-width: 430px)
+    section.top 
+        & .top__title
+            font-size: 36px
+
+@media (max-width: 380px)
+    section.top 
+        & .top__title
+            font-size: 32px
+        & .top__background
+                width: 160%
+                transform: translateX(-37%)
+
+@media (max-width: 350px)
+    section.top 
+        & .top__title
+            font-size: 28px
+        & .top__buttons
+            & .cmp-button_pastel
+                font-size: 16px
+                //padding: 19px 25px

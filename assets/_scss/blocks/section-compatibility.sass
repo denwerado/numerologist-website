@@ -1,0 +1,157 @@
+section.compatibility
+    position: relative
+    padding: 100px 0 350px 0
+    & .compatibility__block
+        max-width: 865px
+        & .calc
+            margin-top: 40px
+            & .wrap
+                display: flex
+                justify-content: space-between
+                align-items: start
+                & .cmp-forms__item
+                    margin: 0
+                    max-width: 387px
+                    & .cmp-forms__input
+                        margin-top: 10px
+                    & .cmp-forms__name
+                        font-weight: 300
+                        font-size: 25px
+                        line-height: 110%
+            & .cmp-button_pastel
+                margin-top: 50px
+                padding: 20px 100px
+        & .compatibility__background
+            position: absolute
+            top: 100px
+            right: 30px
+            max-width: 680px
+            width: 35.4%
+    & .compatibility__title
+        font-size: 38px
+        max-width: 700px
+    & .compatibility__description
+        margin-top: 20px
+
+@media ( max-width: 1600px )
+    section.compatibility
+        padding: 100px 0 250px 0
+
+@media ( max-width: 1500px )
+    section.compatibility
+        padding: 100px 0 150px 0
+        & .compatibility__block
+            max-width: 800px
+
+@media ( max-width: 1370px )
+    section.compatibility
+        padding: 100px 0 150px 0
+        & .compatibility__block
+            max-width: 730px
+            & .calc
+                & .wrap
+                    & .cmp-forms__item
+                        max-width: 350px
+                        & .cmp-forms__name
+                            font-size: 22px
+
+@media ( max-width: 1300px)
+    section.compatibility
+        & .compatibility__block
+            max-width: 700px
+            & .calc
+                & .wrap
+                    & .cmp-forms__item
+                        max-width: 330px
+                        & .cmp-forms__name
+                            font-size: 20px
+
+@media ( max-width: 1250px )
+    section.compatibility
+        padding: 120px 0 120px 0
+        & .compatibility__title
+            font-size: 32px
+        & .compatibility__block
+            max-width: 550px
+            & .calc
+                margin-top: 30px
+                & .wrap
+                    display: block
+                    & .cmp-forms__item
+                        max-width: 380px
+                        &:nth-child(n+2)
+                            margin-top: 20px
+            & .compatibility__background
+                width: auto
+                max-width: 450px
+                top: 120px
+
+@media ( max-width: 1050px )
+    section.compatibility
+        padding: 80px 0 80px 0
+        & .compatibility__title
+            font-size: 36px
+        & .compatibility__block
+            max-width: none
+            & .compatibility__limiter
+                margin-top: 35px
+                max-height: 570px
+                overflow: hidden
+                & .compatibility__background
+                    position: static
+                    max-width: none
+                    width: 100%
+            & .calc
+                margin-top: 40px
+                & .wrap
+                    display: flex
+                    justify-content: space-evenly
+                    & .cmp-forms__item
+                        &:nth-child(n+1)
+                            margin: 0
+                & .cmp-button_pastel
+                    margin: auto
+                    margin-top: 40px
+
+@media ( max-width: 850px )
+    section.compatibility
+        & .compatibility__block
+            & .calc
+                & .wrap
+                    justify-content: space-between
+                    & .cmp-forms__item
+                        max-width: 350px
+
+@media ( max-width: 768px )
+    section.compatibility
+        padding: 50px 0 20px 0
+        & .compatibility__title
+            font-size: 32px
+        & .compatibility__block
+            & .compatibility__limiter
+                margin-top: 20px
+                max-height: 440px
+            & .calc
+                margin-top: 30px
+                & .wrap
+                    display: block
+                    & .cmp-forms__item
+                        max-width: 380px
+                        &:nth-child(n+1)
+                                margin: auto
+                                margin-top: 20px
+                        & .cmp-forms__name
+                            font-size: 18px
+                & .cmp-button_pastel
+                    width: 100%
+                    max-width: 380px
+
+@media ( max-width: 576px )
+    section.compatibility
+        & .compatibility__title
+            font-size: 28px
+
+@media ( max-width: 380px )
+    section.compatibility
+        & .compatibility__title
+            font-size: 22px

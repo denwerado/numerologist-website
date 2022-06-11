@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+@font-face{
+    font-family: 'Moniqa LightCondensedHeading';
+    src: url('../fonts/Moniqa/Moniqa-LightCondensedHeading.otf') format('opentype'),
+    url('../fonts/Moniqa/Moniqa-LightCondensedHeading.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face{
+    font-family: 'Moniqa SemiBoldDisplay';
+    src: url('../fonts/Moniqa/Moniqa-SemiBoldDisplay.otf') format('opentype'),
+    url('../fonts/Moniqa/Moniqa-SemiBoldDisplay.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+.body{
+    color: #2A2623;
+    font-family:  'Montserrat';
+    font-weight: normal;
+}
+
+.section-title{
+    margin: 0;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-size: 52px;
+    font-weight: 400;
+}
+
+.section-description{
+    margin: 0;
+    font-size: 18px;
+    line-height: 1.2em;
+}
+
+.text_bold{
+    font-weight: 600;
+}
+
+.text_pastel{
+    color: rgba(225, 152, 140, 1);
+}
+
+.text_blue{
+    color: #1E90FF;
+}
+
+.text_red{
+    color: #DC143C;
+}
+
+@media (max-width: 768px ){
+    .section-title {
+        font-size: 45px;
+        //letter-spacing: 4px;
+    }
+}
+
+@media (max-width: 576px) {
+    .section-title {
+        font-size: 32px;
+    }
+}
+
+@media (max-width: 380px) {
+    .section-title {
+        font-size: 24px;
+    }
+}

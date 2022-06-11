@@ -1,0 +1,141 @@
+section.bonus
+    padding: 50px 0 100px 0
+    & .bonus__description
+        margin-top: 40px
+        max-width: 570px
+    & .bonus__list
+        margin-top: 50px
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+        & .item
+            position: relative
+            width: 48.76%
+            & .background
+                width: 100%
+                object-fit: cover
+            &__wrap
+                position: absolute
+                left: 40px
+                top: 40px
+                right: 40px
+                & .title
+                    display: block
+                    font-size: 35px
+                    line-height: 1.2em
+                    font-weight: 500
+                & .description
+                    display: block
+                    margin-top: 20px
+                    font-size: 18px
+                    line-height: 1.2em
+            & .cmp-button
+                position: absolute
+                bottom: 0
+                right: 0
+                transform: translateY(30%)
+            &:nth-child(1)
+                & .cmp-button svg
+                    max-width: 30px
+                    max-height: 30px
+
+
+@media (max-width: 1350px)
+    section.bonus
+        & .bonus__list
+            & .item
+                &__wrap
+                    top: 25px
+                    left: 25px
+                    right: 25px
+                    & .title
+                        font-size: 32px
+
+@media (max-width: 1250px)
+    section.bonus
+        & .bonus__list
+            & .item
+                &__wrap
+                    & .title
+                        font-size: 28px
+                    & .description
+                        margin-top: 10px
+
+@media (max-width: 1100px)
+    section.bonus
+        & .bonus__list
+            & .item
+                &__wrap
+                    & .title
+                        font-size: 26px
+
+@media (max-width: 1024px)
+    section.bonus
+        & .bonus__list
+            flex-direction: column
+            justify-content: space-evenly
+            align-items: center
+            & .item
+                width: 70%
+                &__wrap
+                    top: 30px
+                    left: 30px
+                    right: 30px
+                    & .title
+                        font-size: 32px
+                &:nth-child(n+2)
+                    margin-top: 75px
+
+@media (max-width: 850px)
+    section.bonus
+        & .bonus__list
+            & .item
+                &__wrap
+                    left: 25px
+                    right: 25px
+                    & .title
+                        font-size: 28px
+
+@media (max-width: 768px)
+    section.bonus
+        padding: 60px 0 20px 0
+        & .bonus__description
+            margin-top: 25px
+        & .bonus__list
+            & .item
+                &__wrap
+                    position: static
+                    & .title
+                        position: absolute
+                        top: 30px
+                        left: 10px
+                        right: 10px
+                        font-size: 24px
+                    & .description
+                        margin-top: 15px
+                        padding: 0 10px
+                & .cmp-button
+                    position: static
+                    transform: none
+                    margin: auto
+                    margin-top: 20px
+                &:nth-child(n+2)
+                    margin-top: 50px
+
+@media ( max-width: 576px )
+    section.bonus
+        & .bonus__list
+            & .item
+                width: 100%
+                &__wrap
+                    & .title
+                        font-size: 22px
+
+@media ( max-width: 380px )
+    section.bonus
+        & .bonus__list
+            & .item
+                width: 100%
+                &__wrap
+                    & .title
+                        font-size: 18px

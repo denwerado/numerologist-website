@@ -1,0 +1,178 @@
+//Компонент аккордеона
+.cmp-accordeon
+    margin-top: 35px
+
+    //Стили для активного аккордеона
+    &_active
+        & .cmp-accordeon__title
+            & .buttons__right
+                & .item
+                    & .trigger
+                        &::after
+                            height: 0
+                            top: 50%
+    
+    //Стили для заблокированного аккордеона
+    &_disable
+        & .cmp-accordeon__title
+            cursor: not-allowed
+            & .title
+                color: #C2C2C2
+
+    //
+    &__title
+        cursor: pointer
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding-bottom: 30px
+        border-bottom: 1px solid #979797
+        & .title
+            margin: 0
+            font-size: 24px
+            font-weight: 400
+        & .buttons
+            &__right
+                cursor: default
+                display: flex
+                align-items: center
+                margin-left: 15px
+                & .item 
+                    &:nth-child(n+2)
+                        margin-left: 20px
+                    & .calculator
+                        cursor: pointer
+                        max-width: 24px
+                        max-height: 24px
+                        fill: #A90E0E
+                        transition: fill 0.5s 
+                        &:hover
+                            fill: #F26F2E !important
+                    & .trigger
+                        cursor: pointer
+                        position: relative
+                        width: 20px
+                        height: 20px
+                        &::before
+                            content: ''
+                            position: absolute
+                            left: 0
+                            top: 50%
+                            width: 100%
+                            height: 2px
+                            background-color: #2A2623
+                            transform: translateY(-50%)
+                        &::after
+                            content: ''
+                            position: absolute
+                            left: 50%
+                            top: 0
+                            width: 2px
+                            height: 100%
+                            background-color: #2A2623
+                            transform: translateX(-50%)
+                            transition: all 0.6s
+                    & .cmp-latch
+                        cursor: pointer
+                        & svg
+                            max-width: 20px
+                            max-height: 28px
+                            
+                        &__popup
+                            right: auto
+                            left: 20px
+                            top: auto
+                            bottom: -20px
+                            transform: translateX(-100%)
+            &__left
+                display: flex
+                align-items: center
+                & .cmp-hint
+                    margin-right: 15px
+    &__content
+        display: none
+        padding-top: 30px
+        padding-bottom: 15px
+        & .name
+            margin: 0
+            font-weight: 500
+            font-size: 26px
+            &:nth-child(n+2)
+                margin-top: 50px
+        & .title
+            margin: 0
+            //margin-top: 35px
+            margin-bottom: 20px
+            color: rgba(225, 152, 140, 1)
+            font-size: 24px
+            font-weight: 600
+        & .subtitle
+            margin: 0
+            margin-top: 20px
+            font-weight: 500
+            font-size: 22px
+        & .description
+            margin-top: 15px
+            & .p
+                margin: 0
+                font-size: 18px
+                &:nth-child(n+2)
+                    margin-top: 15px
+        & .cmp-accordeon__content-block
+            position: relative
+            margin-top: 35px
+            & .cmp-hint
+                position: absolute
+                left: 0
+                top: 0
+                & ~ .title
+                    margin: 0
+                    padding-left: 40px
+                    
+@media ( max-width: 768px )
+    .cmp-accordeon
+        &__title
+            padding-bottom: 15px
+            & .title
+                font-size: 20px
+        &__content
+            & .name
+                font-size: 20px
+            & .title
+                font-size: 20px
+            & .cmp-accordeon__content-block
+                margin-top: 25px
+
+@media ( max-width: 576px )
+    .cmp-accordeon
+        &__title
+            & .title
+                font-size: 18px
+            & .buttons
+                &__left
+                    & .cmp-hint
+                        margin-right: 10px
+
+@media ( max-width: 380px )
+    .cmp-accordeon
+        &__title
+            & .title
+                font-size: 16px
+            
+@media print
+    .cmp-accordeon
+        &_disable
+            & .cmp-accordeon__content
+                display: none
+        & .cmp-hint
+            display: none 
+        & .buttons__right
+            display: none
+        &__content
+            display: block !important
+            & .cmp-accordeon__content-block
+                & .cmp-hint
+                    display: none
+                    & ~ .title
+                        padding-left: 0
+                    

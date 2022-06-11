@@ -1,0 +1,69 @@
+.cmp-scrollbar
+    position: relative
+    padding-left: 85px
+    margin-top: 50px
+    &__ico
+        position: absolute
+        bottom: 0
+        left: 0
+        max-width: 70px
+        max-height: 70px
+    &__info
+        width: 100%
+        max-width: 360px
+        & .name
+            display: inline-block
+            font-weight: 500px
+            font-style: 16px
+    &__container
+        position: relative
+        width: 100%
+        margin-top: 6px
+        min-height: 32px
+        border: 1px solid #2A2623
+        border-radius: 3px
+    &__line
+        position: absolute
+        top: 0
+        left: 0
+        bottom: 0
+        width: 0
+        transition: width 2s
+        & .message
+            position: absolute
+            display: inline-block
+            right: 10px
+            top: 50%
+            transform: translateY(-50%)
+            font-weight: 500px
+            font-style: 18px
+    &:nth-child(1)
+        & .cmp-scrollbar__line
+            background: #F69691
+    &:nth-child(2)
+        & .cmp-scrollbar__line
+            background: #99BE9D
+    &:nth-child(3)
+        & .cmp-scrollbar__line
+            background: #FFAB82
+        & .cmp-scrollbar__ico
+            fill: #FFAB82
+
+@media ( max-width: 1024px )
+    .cmp-scrollbar
+        padding-left: 65px
+        margin-top: 30px
+        &__ico
+            max-width: 50px
+            max-height: 50px
+
+@media ( max-width: 768px )
+    .cmp-scrollbar
+        padding: 0
+        margin-top: 20px
+        &__ico
+            position: static
+            margin-left: 5px
+            max-width: 20px
+            max-height: 20px
+        

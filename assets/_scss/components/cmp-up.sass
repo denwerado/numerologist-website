@@ -1,0 +1,53 @@
+.cmp-up
+    position: fixed
+    visibility: hidden
+    opacity: 0
+    right: 100px
+    bottom: 50px
+    border: 3px solid #E1988C
+    width: 73px
+    height: 73px
+    border-radius: 50%
+    cursor: pointer
+    transition: 0.8s all
+    background-color: #F9F3EB
+    z-index: 2
+    &_active
+        visibility: visible
+        opacity: 1
+    & svg
+        position: absolute
+        max-height: 44px
+        max-width: 44px
+        left: 50%
+        top: 50%
+        transform: translateX(-50%) translateY(-50%)
+        fill: #2A2623
+        transition: 0.8s all
+    &:hover
+        background-color: #E1988C
+        & svg
+            fill: #fff
+            transform: translateX(-50%) translateY(-70%)
+
+
+@media  (max-width: 1750px )
+    .cmp-up
+        right: 50px
+    
+
+@media  (max-width: 1650px )
+    .cmp-up
+        right: 30px
+        bottom: 30px
+
+@media (max-width: 768px )
+    .cmp-up
+        width: 50px
+        height: 50px
+        & svg
+            max-width: 30px
+
+@media print
+    .cmp-up
+        display: none
